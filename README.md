@@ -3,14 +3,21 @@ pcs_code_challenge_01
 
 Growing Madlibs Code Challenge
 
-Increment 1: 
+1. Gathers the following parts of speech from the user (each can be a word or phrase):
+	Noun
+	Adjective
+	Verb
+	Adverb
+	Object
 
-1. Prompts on the command line with the following text: "Please enter a noun or noun phrase:"
+2. Stores all of these in a hash where the index is the name of the part of speech. For example, "noun" or "verb".
 
-2. Accepts text from the user, removes leading and trailing whitespace, and stores it in the variable 'noun.'
+3. It does not use methods.
 
-3. Inserts the noun or noun phrase in the following sentence template using interpolation:
+4. Prints the hash values
 
-"The (noun or noun phrase) went to sea in a sturdy ship."
+5. Inserts the parts of speech in the following template using hash syntax and interpolation:
 
-4. Displays the resulting sentence to the user and exits.
+	"The (adjective) (noun) suddenly and (adverb) had to (verb) the (object)."
+
+6. Displays the sentence and exits.
