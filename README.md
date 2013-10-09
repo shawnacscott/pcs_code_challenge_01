@@ -3,6 +3,8 @@ pcs_code_challenge_01
 
 Growing Madlibs Code Challenge
 
+Increment 3
+
 1. Gathers the following parts of speech from the user (each can be a word or phrase):
 	Noun
 	Adjective
@@ -16,8 +18,6 @@ Growing Madlibs Code Challenge
 
 4. Prints the hash values
 
-5. Inserts the parts of speech in the following template using hash syntax and interpolation:
+5. Creates an array with three sentence templates. 
 
-	"The (adjective) (noun) suddenly and (adverb) had to (verb) the (object)."
-
-6. Displays the sentence and exits.
+6. Inserts the parts of speech in the templates from the array, prints them out, and exits.

@@ -1,5 +1,5 @@
 
-# This is increment 1
+# This is increment 3
 
 puts "Please enter a noun or noun phrase:"
 noun = gets.strip.downcase
@@ -20,5 +20,9 @@ madlibs = {"noun" => noun, "adjective" => adjective, "verb" => verb, "adverb" =>
 
 puts madlibs
 
-puts "The #{madlibs['adjective']} #{madlibs['noun']} suddenly and #{madlibs['adverb']} had to #{madlibs['verb']} the #{madlibs['object']}"
+array = ["The #{madlibs['adjective']} #{madlibs['noun']} suddenly and #{madlibs['adverb']} had to #{madlibs['verb']} the #{madlibs['object']}", "The #{madlibs['noun']} jumped over the #{madlibs['object']}", "The #{madlibs['noun']} says 'let's #{madlibs['adverb']} #{madlibs['verb']} to the #{madlibs['adjective']} #{madlibs['object']}!'"]
+
+puts array[0]
+puts array[1]
+puts array[2]
 
