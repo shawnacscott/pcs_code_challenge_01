@@ -15,11 +15,13 @@ Increment 4
 		Adverb
 		Object
 
-	b. Store all of these in a hash where the key is the name of the part of speech. For example, "noun" or "verb".
+	b. Ask user to choose a method of transport from a list of four options
+
+	c. Store all of these in a hash.
 
 2. Stores the hash values outside the class
 
-3. Creates an array with three sentence templates. 
+3. Creates an array with four sentence templates. 
 
 4. Uses another class to insert the hash values into the sentence templates
 

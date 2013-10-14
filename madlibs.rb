@@ -17,12 +17,42 @@ class Madlibs
 		puts "Please enter an object or object phrase:"
 		object = gets.strip.downcase
 
+		puts "Choose one of the following:"
+		puts		
+		
+		transport_array = [
+				"in a boat", 
+				"on a bus", 
+				"inside a whale", 
+				"clinging under a speeding truck"
+			]
+
+		iterator = 0
+
+		while iterator < 4
+			puts (iterator + 1).to_s + ". " + transport_array[iterator]
+			iterator += 1
+		end
+
+		iterator = 0
+
+		puts
+		puts "by typing the number of your choice:"
+		transport_input = gets.strip
+
+		while iterator + 1 != transport_input.to_i
+			iterator += 1
+		end
+
+		transport = transport_array[iterator]
+
 		madlibs = {
 			"noun" => noun, 
 			"adjective" => adjective, 
 			"verb" => verb, 
 			"adverb" => adverb, 
-			"object" => object
+			"object" => object,
+			"transport" => transport
 		}
 	end
 end
@@ -30,8 +60,9 @@ end
 madlibs = Madlibs.prompt
 
 template_array = [
-			"The #{madlibs['adjective']} #{madlibs['noun']} suddenly and #{madlibs['adverb']} had to #{madlibs['verb']} the #{madlibs['object']}", 
-			"The #{madlibs['noun']} jumped over the #{madlibs['object']}", 
+			"While #{madlibs['verb']}ing #{madlibs['transport']}, the #{madlibs['noun']} turned #{madlibs['adjective']}.",
+			"The #{madlibs['adjective']} #{madlibs['noun']} suddenly and #{madlibs['adverb']} had to #{madlibs['verb']} the #{madlibs['object']} #{madlibs['transport']}.", 
+			"The #{madlibs['noun']} jumped over the #{madlibs['object']}.", 
 			"The #{madlibs['noun']} says 'let's #{madlibs['adverb']} #{madlibs['verb']} to the #{madlibs['adjective']} #{madlibs['object']}!'"
 		]
 
