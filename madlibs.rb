@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # This is increment 5
+=======
+# This is increment 4
+>>>>>>> 29a92de81682e18102134d3e2543fec328b9b4f1
 
 class Madlibs
 	def self.prompt
