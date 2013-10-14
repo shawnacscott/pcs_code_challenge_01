@@ -17,62 +17,34 @@ class Madlibs
 		puts "Please enter an object or object phrase:"
 		object = gets.strip.downcase
 
-		madlibs = {"noun" => noun, "adjective" => adjective, "verb" => verb, "adverb" => adverb, "object" => object}
+		madlibs = {
+			"noun" => noun, 
+			"adjective" => adjective, 
+			"verb" => verb, 
+			"adverb" => adverb, 
+			"object" => object
+		}
 	end
 end
 
 madlibs = Madlibs.prompt
 
 template_array = [
-			SentenceTemplate.new("The adjective noun suddenly and adverb had to verb the object.")
+			"The #{madlibs['adjective']} #{madlibs['noun']} suddenly and #{madlibs['adverb']} had to #{madlibs['verb']} the #{madlibs['object']}", 
+			"The #{madlibs['noun']} jumped over the #{madlibs['object']}", 
+			"The #{madlibs['noun']} says 'let's #{madlibs['adverb']} #{madlibs['verb']} to the #{madlibs['adjective']} #{madlibs['object']}!'"
 		]
 
 class SentenceTemplate
-
-	def initialize(template_string)
+	def initialize(template_array)
+		@template_array = template_array
 		insert
-		puts "reached initialize"
 	end
 
 	def insert
-		template_output = template_array.each.gsub(/noun/, madlibs)
-		puts "reached insert"
+		@template_array.each {|x| puts x}
 	end
-
 end
 
-
-puts template_output.each
-
-
-# class SentenceTemplates
-# 	def template_01
-# 		@template_01 = "Test Output"
-# 	end 
-# 	def self.output
-# 		puts @template_01
-# 	end
-# end
-
-# output = SentenceTemplates.new
-# output.template_01.output
-
-# #class SentenceTemplates
-# #	def self.sentence_01
-# #		@sentence_01 = ["The #{madlibs['adjective']} #{madlibs['noun']} suddenly and #{madlibs['adverb']} had to #{madlibs['verb']} the #{madlibs['object']}"
-# #	end
-# #	def insert
-# #
-# #	end
-# #end
-
-
-
-# # array = [
-# # 	"The #{madlibs['adjective']} #{madlibs['noun']} suddenly and #{madlibs['adverb']} had to #{madlibs['verb']} the #{madlibs['object']}", 
-# # 	"The #{madlibs['noun']} jumped over the #{madlibs['object']}", 
-# # 	"The #{madlibs['noun']} says 'let's #{madlibs['adverb']} #{madlibs['verb']} to the #{madlibs['adjective']} #{madlibs['object']}!'"
-# # ]
-
-# # puts array.each { |x| puts x }
-
+final_output = SentenceTemplate.new(template_array)
+puts final_output
